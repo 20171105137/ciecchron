@@ -15,6 +15,22 @@ fileprivate let cRecordH: CGFloat = 40
 
 class ViewController: UIViewController,UIScrollViewDelegate {
 
+    
+    
+     func viewDidload(){
+        super.viewDidLoad()
+        let path = Bundle.main.path(forResource:"11",ofType:"png")
+        let newImage = UIImage(contentsOfFile: path!)
+        picture.image = newImage
+        
+
+        //  myView()
+        
+    }
+    
+    
+    
+    
     // 控件
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
@@ -31,10 +47,11 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var cButtonH: CGFloat!
     var recordArray: [UILabel]!
     
-    override func viewDidLoad() {
 
-        myView()
-    }
+    
+    
+    @IBOutlet weak var picture: UIImageView!
+    
     
     
 
@@ -94,7 +111,12 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     
     
     
-    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        
+        return scrollView.subviews[0]
+        
+    }
+
     
     
     
@@ -136,6 +158,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
             }
         }
     }
+ 
+    
     
 }
 
@@ -176,24 +200,29 @@ extension ViewController {//界面style函数
         self.rightButton.setTitle("开始", for: .normal)
     }
     
-
-    
-    
-
- 
-    
 }
 
     
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
     
 
-func viewDidLoad() {
-      viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+
+
 
 
 

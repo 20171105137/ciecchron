@@ -51,6 +51,10 @@
                                             <action selector="rightAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L61-sU-jwT"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Yc-Lj-pth">
+                                        <rect key="frame" x="88" y="269" width="241" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,6 +65,7 @@
                     </view>
                     <connections>
                         <outlet property="leftButton" destination="m0O-t4-SjY" id="yWe-Yo-Erv"/>
+                        <outlet property="picture" destination="7Yc-Lj-pth" id="YDd-KF-qsq"/>
                         <outlet property="rightButton" destination="qin-yl-wS3" id="4Xe-o8-uzz"/>
                         <outlet property="timeLabel" destination="t1e-ap-GcR" id="Y5f-dB-xJw"/>
                     </connections>
